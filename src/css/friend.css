@@ -1,0 +1,102 @@
+.FriendSection{
+    width: 100vw;
+    height: 100dvh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #00000061;
+}
+
+.Frightpanel{
+    background: linear-gradient( 270deg, rgb(208, 187, 148) 96%, rgb(74, 44, 42) 100% );
+    width: 30vw;
+    height: 100%;
+
+    position: absolute;
+    right: 0;
+
+    padding: 2em;
+}
+.forminputFriend{
+    display: flex;
+    justify-content: center;
+    column-gap: 1em;
+}
+.forminputFriend > input,.forminputFriend > button{
+    padding: .5em 1em;
+    border-radius: 1em;
+}
+.SearchCon{
+    margin-bottom: 1em;
+}
+.TitleF{
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.FriendList > .ListF{
+    padding: 1em;
+    border-bottom: 2px solid rgb(74, 44, 42);
+    display: flex;
+
+    align-items: center;
+    column-gap: 1em;
+}
+.ListF i{
+    font-size: 1.5em;
+}
+.fa-user-plus{
+    padding: .3em;
+}
+.fa-user-plus:hover{
+    background: rgb(74, 44, 42);
+    color: var(--color1);
+    border-radius: 10px;
+}
+
+input[type="search"]{
+    background: transparent;
+    outline: none;
+    border: 1px solid rgb(74, 44, 42);
+
+}   
+button{
+    background: transparent;
+    color: #4A2C2A;
+    border: 1px solid rgb(74, 44, 42);
+}
+button:hover{
+    background: #a08765;
+    color: #fff;
+
+}
+.FriendList{
+    overflow: auto;
+    max-height: 70dvh;
+}
+.FriendList::-webkit-scrollbar{
+    width: 2px;
+}
+
+.FriendClose{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    translate: -50% 0%;
+
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+}
+
+.FriendClose i{
+    font-size: 3em;
+    color: rgb(207, 32, 32);;
+}
+
+.FriendClose:hover i{
+    color: #fff;
+}

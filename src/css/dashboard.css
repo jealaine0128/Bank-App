@@ -1,0 +1,418 @@
+:root{
+    --bgcolor : #20262E;
+    --color1: #9e7b63fc;
+    --color2:#cd5888;
+    --color3: #c8a97e;
+}
+.DashboardInit{
+    font-family:sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav{
+    padding: 0 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    padding: 1.5em 0;
+    display: inline-block;
+}
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    translate: -0% 20%;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown i{
+    font-size: 1.5em;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+
+
+
+.mainbody{
+    padding: 0 1.5em 1.5em;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+}
+
+/*1st part of mainbody*/
+.card{
+    display: flex;
+    column-gap: 1em;
+}
+
+.cardinfo{
+    overflow-x: hidden;
+    width: 50%;
+    height: 200px;
+    border-radius: 1em;
+
+
+
+    border: 1px solid var(--color1);
+
+    background: linear-gradient( 90deg, rgba(208, 187, 148, 0.741) 60%, rgba(74, 44, 42, 0.763) 100% );
+
+    box-shadow: rgba(158,123,99, 0.4) 5px 5px, rgba(158,123,99, 0.3) 10px 10px, rgba(158,123,99, 0.2) 15px 15px, rgba(158,123,99, 0.1) 20px 20px, rgba(158,123,99, 0.05) 25px 25px;
+}
+
+.balancecontainer{
+    display: block;
+    padding: .5em 0.5em;
+    position: relative;
+    top: 50%;
+    left: 0%;
+    translate: 5% -50%;
+
+}
+.balancecontainer h1{
+    font-size: 3em;
+}
+
+.showcardinfo{
+    display: none;
+    width: 100%;
+    height: 100%;
+
+
+}
+.cardinformation{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 1em 2em;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    align-items:end;
+}
+
+.cardinformation .imgvisacard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+
+.leftside{
+    z-index: 1;
+    color: white;
+}
+.banknum{
+    font-weight: bold;
+}
+.expiredate{
+    font-style: italic;
+}
+
+.cardinfo:hover > .showcardinfo{
+    display: block;
+}
+.cardinfo:hover > .balancecontainer{
+    display: none;
+}
+
+.cardbtn{
+
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1em;
+    column-gap: 1em;
+    justify-content: center;
+
+}
+.cardbtn > div{ 
+    width: 45%;    
+    border-radius: 1em;
+    padding: 1em;
+    border: 1px solid var(--color1);
+
+    text-align: center;
+
+    background: var(--color3);
+    font-style: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    column-gap: 1em;
+    flex-wrap: wrap;
+
+    transition: all 1s ease;
+
+}
+
+.cardbtn > div:hover{
+    background: radial-gradient(circle, rgba(208, 187, 148, 0.741) 60%, rgba(74, 44, 42, 0.763) 100%);
+}
+
+.cardbtn > div i{
+    font-size: 1.5em;
+}
+@media only screen and (max-width:700px){
+    
+    .card{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .cardinfo{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .cardbtn{
+
+        width: 100%;
+
+    
+    }
+}
+
+/*2nd part of mainbody*/
+.expensesmain{
+    border-radius: 1em;
+    border: 1px solid var(--color1);
+    box-shadow: rgba(158,123,99, 0.4) 5px 5px, rgba(158,123,99, 0.3) 10px 10px, rgba(158,123,99, 0.2) 15px 15px, rgba(158,123,99, 0.1) 20px 20px, rgba(158,123,99, 0.05) 25px 25px;
+}
+
+.expenseheader{
+    border-top-right-radius: 1em ;
+    border-top-left-radius: 1em ;
+
+    background: linear-gradient( 235deg, rgba(208, 187, 148, 0.741) 30%, rgba(74, 44, 42, 0.763) 67% );
+
+    padding: 1em;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+    color: #fff;
+}
+.addexpense i {
+    font-size: 2.5em;    
+    color: #a08765;
+}
+.addexpense i:hover {
+    color: #4A2C2A; 
+}
+
+
+
+.expensetable{
+    overflow-x:auto;
+    padding: 1em;
+
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th{
+    font-size: 1.1em;
+    padding: 1em 0;
+    border-bottom: 1px solid black;
+}
+th:nth-child(1),th:nth-child(2),td:nth-child(2){
+    text-align: start;
+}
+
+
+td:nth-child(3){
+    text-align: center;
+}
+
+td,th{
+    padding: 1em 1em;
+    align-items: center;
+
+}
+
+/*List Btn*/
+.Listbtn{
+    display: flex;
+    column-gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+}
+.Listbtn i{
+    font-size: 1.5em;
+    transition: all .5s ease;
+}
+.fa-trash{
+    color: rgb(207, 32, 32);
+    padding: .3em;
+    border-radius: .3em;
+}
+.fa-trash:hover{
+    background: red;
+    color: #fff;
+}
+.fa-pen-to-square{
+    color: rgb(52, 52, 204);
+    padding: .3em;
+    border-radius: .3em;
+}
+.fa-pen-to-square:hover{
+    background: blue;
+    color: #fff;
+}
+
+
+/*account section*/
+.accountsection{
+    display: none;
+    position: fixed;
+    background: #00000078;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+}
+.settingcon{
+    background: #fff;
+    width: 50vw;
+    height: 400px;
+
+    border-radius: 2em;
+
+    overflow: hidden;
+    display: flex;
+
+
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.settingnav{
+    width: 30%;
+    height: 100%;
+    border-right: 3px solid rgb(74, 44, 42,0.763);
+}
+.settingnav > div{
+    padding: 1em;
+    border: 0;
+    border-bottom: 2px solid var(--color3);
+}
+.settingnav > div:hover{
+    background: var(--color3);
+}
+.settingnav > div:last-child{
+    position: absolute;
+    width: 30%;
+    bottom: 0%;
+    border: 0;
+    border-top:3px solid var(--color3);
+}
+.settingnav > .activediv{
+    background: linear-gradient( 90deg, rgba(208, 187, 148, 0.741) 80%, rgba(74, 44, 42, 0.763) 100% );
+}
+.settingnav > .activediv:hover{
+    background: linear-gradient( 90deg, rgba(208, 187, 148, 0.741) 80%, rgba(74, 44, 42, 0.763) 100% );
+}
+
+.settingscreeb{
+    width: 70%;
+    height: 100%;
+}
+.forminputsset{
+    margin-top: 1em;
+    padding: 0em 2em;
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+
+    width: 100%;
+    margin-bottom: 1em;
+}
+.forminputsset > label{
+    width: 40%;
+    font-size: 1em;
+}
+
+.forminputsset > input{
+    padding: 1em .5em;
+    width: 60%;
+
+    border: 1px solid var(--color3);
+}
+.forminputsset >.readonly{
+    border: 0;
+}
+
+
+.formbtns{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.formbtns > input{
+
+    border-radius: 1em;
+
+    padding: 1em;
+    border: 1px solid var(--color3);
+    background: transparent;
+}
+.formbtns > input:hover{
+    background: linear-gradient( 180deg, rgba(208, 187, 148, 0.741) 80%, rgba(74, 44, 42, 0.763) 100% );
+
+}
+
+.set2info{
+    display: none;
+}
